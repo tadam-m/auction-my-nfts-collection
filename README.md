@@ -4,7 +4,13 @@
 
 First of all you need to edit the .env file.
 
-For that you will need to put your alchemy key and your metamask account private key.
+For that you will need to put your alchemy key and your metamask account private key: 
+
+```shell
+ALCHEMY_KEY="{YOU_ALCHEMY_KEY}"
+
+ACCOUNT_PRIVATE_KEY="{YOU_METAMASK_KEY}"
+```
 
 ### Installation 
  
@@ -27,6 +33,14 @@ npx hardhat deploy
 ```
 
 Don't forget to copy / paste the Auction and NFTsCollection contract hash from the deploy output into your .env file.
+
+```shell
+# auction contract hash give after running the command npx hardhat deploy
+REACT_APP_AUCTION_CONTRACT_ADDRESS="{AUCTION_CONTRACT_FROM_DEPLOY}"
+
+# nftcollection contract hash give after running the command npx hardhat deploy
+REACT_APP_NFT_CONTRACT_ADDRESS="{NFTCOLLECTION_CONTRACT_FROM_DEPLOY}"
+```
 
 
 ### Run the App 
