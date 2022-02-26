@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Header  from './components/Header';
+import Layout from './components/Layout';
+import Footer from './components/Footer';
+import BidNFTsCollection from './components/BidNFTsCollections';
+import { NftProvider} from "use-nft";
+import { ethers } from "ethers";
+import { getDefaultProvider, } from "ethers";
+
+const fetcher = ["ethers", { ethers,  provider: getDefaultProvider("rinkeby") }] // Implement the Ethers fetcher from ethers library 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Layout >
+    <NftProvider fetcher={fetcher}> 
+      <Header></Header>
+      <BidNFTsCollection/>
+      <Footer/>
+    </NftProvider>
+  </Layout>
   );
 }
 
