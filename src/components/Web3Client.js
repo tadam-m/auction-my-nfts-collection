@@ -1,5 +1,5 @@
 import Web3 from 'web3';
-import Auction from "../../artifacts/contracts/Auction.sol/Auction.json";
+import Auction from "../../src/assets/contract/Auction.json";
 
 let selectedAccount;
 let nftContract;
